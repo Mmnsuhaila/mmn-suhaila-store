@@ -18,3 +18,24 @@ function viewCart() {
 
   alert(message);
 }
+function checkout() {
+    if (cart.length === 0) {
+        alert("Cart ɗinka babu komai.");
+        return;
+    }
+
+    let message = "Assalamu Alaikum, ina son yin oda:%0A%0A";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += item.product + " - ₦" + item.price + "%0A";
+        total += item.price;
+    });
+
+    message += "%0AJimilla: ₦" + total;
+
+    window.open(
+        "https://wa.me/2348060383939?text=" + message,
+        "_blank"
+    );
+}
