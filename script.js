@@ -2,7 +2,9 @@ let cart = [];
 
 function addToCart(product, price) {
   cart.push({ product, price });
-  alert(product + " an ƙara shi cikin Cart.");
+  alert(product + " an kara shi cikin Cart");
+  
+  document.getElementById("cart-count").textContent = cart.length;
 }
 
 function viewCart() {
