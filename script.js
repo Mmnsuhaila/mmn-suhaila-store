@@ -25,7 +25,20 @@ function checkout() {
         alert("Cart ɗinka babu komai.");
         return;
     }
+function searchProducts() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
 
+  cards.forEach(card => {
+    let name = card.querySelector("h3").textContent.toLowerCase();
+
+    if (name.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
     let message = "Assalamu Alaikum, ina son yin oda:%0A%0A";
     let total = 0;
 
