@@ -68,3 +68,10 @@ function searchProducts() {
     }
   });
 }
+function showDetails(name, price, description) {
+  alert(
+    "🛍️ " + name +
+    "\n\n💰 Farashi: ₦" + price +
+    "\n\n📝 " + description
+  );
+}
